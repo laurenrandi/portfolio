@@ -20,7 +20,7 @@
       display: flex;
     }
     #experience,
-    .experience-details-container {
+    .experience-details-containefr {
       margin-top: 2rem;
     }
     #profile,
@@ -95,7 +95,7 @@
       font-size: 1.25rem;
     }
     .title {
-      font-size: 2rem;
+      font-size: 6rem;
     }
     .text-container {
       text-align: justify;
