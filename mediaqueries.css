@@ -10,7 +10,9 @@
     #projects {
       height: fit-content;
     }
+    
   }
+
   
   @media screen and (max-width: 1200px) {
     #desktop-nav {
@@ -91,11 +93,14 @@
       height: 46vw;
       justify-content: center;
     }
+    .section__text__p1{
+      font-size: 1.2rem;
+    }
     .section__text__p2 {
-      font-size: 1.25rem;
+      font-size: 1.8rem;
     }
     .title {
-      font-size: 2rem;
+      font-size: 4.2rem;
     }
     .text-container {
       text-align: justify;
