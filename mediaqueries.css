@@ -126,3 +126,17 @@
     text-align: justify;
   }
 }
+
+@media screen and (max-width: 600px) {
+  #profile .section__text__p1 {
+    font-size: 1rem;
+  }
+
+  #profile .section__text__p2 {
+    font-size: 1.3rem;
+  }
+
+  #profile .title {
+    font-size: 2.8rem;
+  }
+}
