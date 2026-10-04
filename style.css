@@ -359,6 +359,18 @@ article .icon {
   position: relative;
 }
 
+#projects .about-containers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#projects .details-container {
+  width: auto;
+  box-sizing: border-box;
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
