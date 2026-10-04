@@ -1,4 +1,5 @@
 @media screen and (max-width: 1400px) {
+
   #profile {
     margin-bottom: 6rem;
   }
@@ -13,7 +14,9 @@
   }
 }
 
+
 @media screen and (max-width: 1200px) {
+
   #desktop-nav {
     display: none;
   }
@@ -54,9 +57,16 @@
   .about-containers {
     margin-top: 0;
   }
+
+  /* PROJECTS: 2 projects per row */
+  #projects .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+
 @media screen and (max-width: 600px) {
+
   #contact,
   footer {
     height: auto;
@@ -125,9 +135,16 @@
   .text-container {
     text-align: justify;
   }
+
+  /* PROJECTS: 1 project per row */
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+  }
 }
 
+
 @media screen and (max-width: 600px) {
+
   #profile .section__text__p1 {
     font-size: 1rem;
   }
@@ -139,4 +156,5 @@
   #profile .title {
     font-size: 2.8rem;
   }
+
 }
