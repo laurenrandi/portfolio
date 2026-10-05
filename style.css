@@ -469,11 +469,11 @@ footer p {
 
 
 /* Reduce spacing between project sections */
-
+/* 
 .project-page section {
   min-height: auto;
   padding: 4rem 10%;
-}
+} */
 
 
 /* Project intro */
@@ -545,12 +545,18 @@ footer p {
 
 /* ARROWS */
 
+.project-page section {
+  position: relative;
+  min-height: auto;
+  padding: 4rem 10%;
+}
+
 .project-page .arrow {
+  position: static;
   display: block;
   margin: 2rem auto 0;
   cursor: pointer;
 }
-
 
 /* Back button */
 
