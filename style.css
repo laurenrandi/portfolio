@@ -19,12 +19,14 @@ p {
   color: rgb(85, 85, 85);
 }
 
+
 /* TRANSITION */
 
 a,
 .btn {
   transition: all 300ms ease;
 }
+
 
 /* DESKTOP NAV */
 
@@ -66,6 +68,7 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
+
 
 /* HAMBURGER MENU */
 
@@ -147,6 +150,7 @@ a:hover {
   transform: none;
 }
 
+
 /* SECTIONS */
 
 section {
@@ -160,6 +164,7 @@ section {
 .section-container {
   display: flex;
 }
+
 
 /* PROFILE SECTION */
 
@@ -192,7 +197,6 @@ section {
 
 .section__text__p2 {
   font-size: 3rem;
-  /* margin-bottom: 1rem; */
 }
 
 .title {
@@ -207,12 +211,14 @@ section {
   gap: 1rem;
 }
 
+
 /* ICONS */
 
 .icon {
   cursor: pointer;
   height: 2rem;
 }
+
 
 /* BUTTONS */
 
@@ -261,6 +267,7 @@ section {
 .btn-container {
   gap: 1rem;
 }
+
 
 /* ABOUT SECTION */
 
@@ -315,6 +322,7 @@ section {
   margin: auto 0;
 }
 
+
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -354,6 +362,7 @@ article .icon {
   cursor: default;
 }
 
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -381,6 +390,7 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 250px;
+  object-fit: cover;
 }
 
 .project-title {
@@ -392,6 +402,7 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
 
 /* CONTACT */
 
@@ -408,7 +419,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -433,6 +444,7 @@ article .icon {
   height: 2.5rem;
 }
 
+
 /* FOOTER SECTION */
 
 footer {
@@ -443,6 +455,9 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/* PROFILE TEXT */
 
 #profile .section__text__p1 {
   font-size: 1.4rem;
@@ -459,6 +474,7 @@ footer p {
   line-height: 1.05;
 }
 
+
 /* ==================================================
    PROJECT PAGES
 ================================================== */
@@ -468,24 +484,55 @@ footer p {
 }
 
 
-/* Reduce spacing between project sections */
-/* 
+/* PROJECT PAGE SECTIONS */
+
 .project-page section {
-  min-height: auto;
-  padding: 4rem 10%;
-} */
+  position: relative;
 
+  /*
+    Override the original section height.
+    Project sections need to grow with their content.
+  */
+  height: auto;
 
-/* Project intro */
+  /*
+    Each section will still take up roughly a
+    full screen when there is not much content.
+  */
+  min-height: 96vh;
 
-.project-page #profile {
-  min-height: auto;
+  /*
+    Keep the same horizontal spacing as
+    the original portfolio.
+  */
+  margin: 0 10rem;
+
+  /*
+    Give the content room vertically.
+  */
   padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
+
+  box-sizing: border-box;
 }
 
 
-/* Section headings */
+/* PROJECT INTRO */
+
+.project-page #profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+  min-height: 80vh;
+
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+
+/* SECTION HEADINGS */
 
 .project-page .section__text__p1 {
   margin-bottom: 0.5rem;
@@ -496,10 +543,11 @@ footer p {
 }
 
 
-/* Containers */
+/* CONTAINERS */
 
 .project-page .section-container {
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+  height: auto;
 }
 
 .project-page .experience-details-container {
@@ -511,21 +559,21 @@ footer p {
 }
 
 
-/* Individual cards */
+/* INDIVIDUAL CARDS */
 
 .project-page .details-container {
   padding: 1.5rem;
 }
 
 
-/* Text */
+/* TEXT */
 
 .project-page .text-container p {
   margin-bottom: 0.75rem;
 }
 
 
-/* Images */
+/* PROJECT IMAGES */
 
 .project-page .project-img {
   width: 100%;
@@ -534,7 +582,7 @@ footer p {
 }
 
 
-/* Video */
+/* PROJECT VIDEO */
 
 .project-page video {
   display: block;
@@ -543,29 +591,32 @@ footer p {
   object-fit: contain;
 }
 
-/* ARROWS */
 
-.project-page section {
-  position: relative;
-  min-height: auto;
-  padding: 4rem 10%;
-}
+/* PROJECT PAGE ARROWS */
 
 .project-page .arrow {
- position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  position: absolute;
+
+  right: 2rem;
+  bottom: 2rem;
+
+  display: block;
+
+  cursor: pointer;
 }
 
-/* Back button */
+
+/* BACK TO PROJECTS */
 
 .project-page .project-back {
+  min-height: auto;
+
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 
-/* Footer */
+/* PROJECT PAGE FOOTER */
 
 .project-page footer {
   margin-top: 1rem;
