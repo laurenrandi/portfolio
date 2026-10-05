@@ -3,93 +3,600 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" href="../assets/favicon.png">
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
 
-  <title>Randi's Creative Corner</title>
+  <title>Project Name | Randi Williams</title>
+
+  <!-- Your existing portfolio styling -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../mediaqueries.css" />
 </head>
 
 <body>
 
-  <main class="project-page">
+  <!-- ==================== NAVIGATION ==================== -->
 
-    <h1>Randi's Creative Corner</h1>
+  <nav id="desktop-nav">
+    <div>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <p>
-      A personal creative library designed to give me a place to
-      organize and display my creative work without the social
-      media comparison and engagement features of traditional platforms.
+  <nav id="hamburger-nav">
+    <div class="hamburger-menu">
+
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-links">
+        <li>
+          <a href="../index.html#about" onclick="toggleMenu()">About</a>
+        </li>
+
+        <li>
+          <a href="../index.html#experience" onclick="toggleMenu()">Experience</a>
+        </li>
+
+        <li>
+          <a href="../index.html#projects" onclick="toggleMenu()">Projects</a>
+        </li>
+
+        <li>
+          <a href="../index.html#contact" onclick="toggleMenu()">Contact</a>
+        </li>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ==================== PROJECT INTRO ==================== -->
+
+  <section id="profile">
+
+    <div class="section__text">
+
+      <p class="section__text__p1">
+        Project
+      </p>
+
+      <h1 class="title">
+        Project Name
+      </h1>
+
+      <p class="section__text__p2">
+        Short description of the project
+      </p>
+
+      <div class="btn-container">
+
+        <button
+          class="btn btn-color-2"
+          onclick="window.open('GITHUB-LINK', '_blank')"
+        >
+          Github
+        </button>
+
+        <button
+          class="btn btn-color-1"
+          onclick="window.open('LIVE-DEMO-LINK', '_blank')"
+        >
+          Live Demo
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== PROJECT OVERVIEW ==================== -->
+
+  <section id="about">
+
+    <p class="section__text__p1">
+      About The Project
     </p>
 
-    <h2>About the Project</h2>
+    <h1 class="title">
+      Overview
+    </h1>
 
-    <p>
-      <!-- Write about why you created it here -->
+    <div class="section-container">
+
+      <div class="about-details-container">
+
+        <div class="text-container">
+
+          <p>
+            Write a description of your project here.
+
+            Explain what the project is, why you created it,
+            what problem it solves, and what your role was.
+
+            This can be several paragraphs if necessary.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== TECHNOLOGIES ==================== -->
+
+  <section id="experience">
+
+    <p class="section__text__p1">
+      Technologies Used
     </p>
 
-    <h2>Technologies</h2>
+    <h1 class="title">
+      Tech Stack
+    </h1>
 
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Next.js</li>
-    </ul>
+    <div class="experience-details-container">
 
-    <h2>Features</h2>
+      <div class="about-containers">
 
-    <ul>
-      <li>Creative work organization</li>
-      <li>Personal media library</li>
-      <li>Interactive environments</li>
-      <li>Music integration</li>
-    </ul>
+        <div class="details-container">
 
-    <h2>Documentation</h2>
+          <h2 class="experience-sub-title">
+            Frontend
+          </h2>
 
-    <p>
-      <!-- Project documentation -->
+          <div class="article-container">
+
+            <article>
+              <img
+                src="../assets/checkmark.png"
+                alt="Technology icon"
+                class="icon"
+              />
+
+              <div>
+                <h3>React</h3>
+                <p>Used for...</p>
+              </div>
+            </article>
+
+            <article>
+              <img
+                src="../assets/checkmark.png"
+                alt="Technology icon"
+                class="icon"
+              />
+
+              <div>
+                <h3>JavaScript</h3>
+                <p>Used for...</p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+
+        <div class="details-container">
+
+          <h2 class="experience-sub-title">
+            Backend / Other
+          </h2>
+
+          <div class="article-container">
+
+            <article>
+              <img
+                src="../assets/checkmark.png"
+                alt="Technology icon"
+                class="icon"
+              />
+
+              <div>
+                <h3>Node.js</h3>
+                <p>Used for...</p>
+              </div>
+            </article>
+
+            <article>
+              <img
+                src="../assets/checkmark.png"
+                alt="Technology icon"
+                class="icon"
+              />
+
+              <div>
+                <h3>PostgreSQL</h3>
+                <p>Used for...</p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== FEATURES ==================== -->
+
+  <section>
+
+    <p class="section__text__p1">
+      What It Does
     </p>
 
-    <h2>Photos</h2>
+    <h1 class="title">
+      Features
+    </h1>
 
-    <img
-      src="../assets/rcc2.png"
-      alt="Randi's Creative Corner"
-    />
+    <div class="experience-details-container">
 
-    <h2>Videos</h2>
+      <div class="about-containers">
 
-    <!-- Add video here later -->
+        <div class="details-container">
 
-    <h2>Code</h2>
+          <h2 class="experience-sub-title">
+            Feature One
+          </h2>
 
-    <p>
-      <a
-        href="https://github.com/laurenrandi/randiscreativecorner"
-        target="_blank"
+          <p>
+            Explain an important feature of the project
+            and how it works.
+          </p>
+
+        </div>
+
+
+        <div class="details-container">
+
+          <h2 class="experience-sub-title">
+            Feature Two
+          </h2>
+
+          <p>
+            Explain another important feature.
+          </p>
+
+        </div>
+
+
+        <div class="details-container">
+
+          <h2 class="experience-sub-title">
+            Feature Three
+          </h2>
+
+          <p>
+            Explain another feature.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== DOCUMENTATION ==================== -->
+
+  <section>
+
+    <p class="section__text__p1">
+      Development Process
+    </p>
+
+    <h1 class="title">
+      Documentation
+    </h1>
+
+    <div class="section-container">
+
+      <div class="about-details-container">
+
+        <div class="text-container">
+
+          <p>
+            Explain how you developed the project.
+
+            You could talk about planning, design,
+            implementation, testing, challenges,
+            and important decisions you made.
+          </p>
+
+          <br />
+
+          <p>
+            You can add additional documentation,
+            diagrams, screenshots, or explanations here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== PROJECT PHOTOS ==================== -->
+
+  <section>
+
+    <p class="section__text__p1">
+      See The Project
+    </p>
+
+    <h1 class="title">
+      Gallery
+    </h1>
+
+    <div class="experience-details-container">
+
+      <div class="about-containers">
+
+        <div class="details-container color-container">
+
+          <div class="article-container">
+
+            <img
+              src="../assets/project-photo-1.png"
+              alt="Project screenshot"
+              class="project-img"
+            />
+
+          </div>
+
+          <h2 class="experience-sub-title project-title">
+            Screenshot One
+          </h2>
+
+        </div>
+
+
+        <div class="details-container color-container">
+
+          <div class="article-container">
+
+            <img
+              src="../assets/project-photo-2.png"
+              alt="Project screenshot"
+              class="project-img"
+            />
+
+          </div>
+
+          <h2 class="experience-sub-title project-title">
+            Screenshot Two
+          </h2>
+
+        </div>
+
+
+        <div class="details-container color-container">
+
+          <div class="article-container">
+
+            <img
+              src="../assets/project-photo-3.png"
+              alt="Project screenshot"
+              class="project-img"
+            />
+
+          </div>
+
+          <h2 class="experience-sub-title project-title">
+            Screenshot Three
+          </h2>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== VIDEO ==================== -->
+
+  <section>
+
+    <p class="section__text__p1">
+      Project Demonstration
+    </p>
+
+    <h1 class="title">
+      Video
+    </h1>
+
+    <div class="section-container">
+
+      <div class="about-details-container">
+
+        <div class="text-container">
+
+          <video
+            controls
+            width="100%"
+          >
+            <source
+              src="../assets/project-video.mp4"
+              type="video/mp4"
+            />
+
+            Your browser does not support video.
+          </video>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== CODE ==================== -->
+
+  <section>
+
+    <p class="section__text__p1">
+      Source Code
+    </p>
+
+    <h1 class="title">
+      Code
+    </h1>
+
+    <div class="section-container">
+
+      <div class="about-details-container">
+
+        <div class="text-container">
+
+          <p>
+            View the source code and development files
+            for this project on GitHub.
+          </p>
+
+          <br />
+
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('GITHUB-LINK', '_blank')"
+          >
+            View on Github
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== WHAT I LEARNED ==================== -->
+
+  <section>
+
+    <p class="section__text__p1">
+      Reflection
+    </p>
+
+    <h1 class="title">
+      What I Learned
+    </h1>
+
+    <div class="section-container">
+
+      <div class="about-details-container">
+
+        <div class="text-container">
+
+          <p>
+            Explain what you learned while working on
+            this project.
+
+            This could include technical skills,
+            problem-solving, teamwork, debugging,
+            design decisions, or something you would
+            approach differently today.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== BACK TO PROJECTS ==================== -->
+
+  <section>
+
+    <div class="btn-container">
+
+      <button
+        class="btn btn-color-2"
+        onclick="location.href='../index.html#projects'"
       >
-        View the project on GitHub
-      </a>
-    </p>
+        ← Back to Projects
+      </button>
 
-    <h2>What I Learned</h2>
+    </div>
+
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+
+  <footer>
+
+    <nav>
+
+      <div class="nav-links-container">
+
+        <ul class="nav-links">
+
+          <li>
+            <a href="../index.html#about">About</a>
+          </li>
+
+          <li>
+            <a href="../index.html#experience">Experience</a>
+          </li>
+
+          <li>
+            <a href="../index.html#projects">Projects</a>
+          </li>
+
+          <li>
+            <a href="../index.html#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
 
     <p>
-      <!-- Talk about what you learned while building it -->
+      Copyright &#169; 2026 Randi Williams. All Rights Reserved.
     </p>
 
-    <button
-      class="btn btn-color-2"
-      onclick="location.href='../index.html#projects'"
-    >
-      Back to Projects
-    </button>
+  </footer>
 
-  </main>
+
+  <script src="../script.js"></script>
 
 </body>
+
 </html>
