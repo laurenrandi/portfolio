@@ -341,6 +341,7 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
   width: 70%;
+  height: 70%;
 }
 
 article {
