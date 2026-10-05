@@ -10,58 +10,180 @@
 
   <title>Project Name | Randi Williams</title>
 
-  <!-- Your existing portfolio styling -->
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../mediaqueries.css" />
 </head>
 
-<body>
 
-  <!-- ==================== NAVIGATION ==================== -->
+<body class="project-page">
+
+
+  <!-- ==================================================
+       DESKTOP NAVIGATION
+  ================================================== -->
 
   <nav id="desktop-nav">
+
     <div>
       <ul class="nav-links">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#experience">Experience</a></li>
-        <li><a href="../index.html#projects">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="#overview">Overview</a>
+        </li>
+
+        <li>
+          <a href="#tech-stack">Tech Stack</a>
+        </li>
+
+        <li>
+          <a href="#features">Features</a>
+        </li>
+
+        <li>
+          <a href="#documentation">Documentation</a>
+        </li>
+
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+          <a href="#video">Video</a>
+        </li>
+
+        <li>
+          <a href="#code">Code</a>
+        </li>
+
+        <li>
+          <a href="#learned">What I Learned</a>
+        </li>
+
       </ul>
     </div>
+
   </nav>
 
+
+
+  <!-- ==================================================
+       HAMBURGER NAVIGATION
+  ================================================== -->
+
   <nav id="hamburger-nav">
+
     <div class="hamburger-menu">
 
-      <div class="hamburger-icon" onclick="toggleMenu()">
+      <div
+        class="hamburger-icon"
+        onclick="toggleMenu()"
+      >
+
         <span></span>
         <span></span>
         <span></span>
+
       </div>
 
+
       <div class="menu-links">
+
         <li>
-          <a href="../index.html#about" onclick="toggleMenu()">About</a>
+          <a
+            href="../index.html"
+            onclick="toggleMenu()"
+          >
+            Home
+          </a>
         </li>
 
         <li>
-          <a href="../index.html#experience" onclick="toggleMenu()">Experience</a>
+          <a
+            href="#overview"
+            onclick="toggleMenu()"
+          >
+            Overview
+          </a>
         </li>
 
         <li>
-          <a href="../index.html#projects" onclick="toggleMenu()">Projects</a>
+          <a
+            href="#tech-stack"
+            onclick="toggleMenu()"
+          >
+            Tech Stack
+          </a>
         </li>
 
         <li>
-          <a href="../index.html#contact" onclick="toggleMenu()">Contact</a>
+          <a
+            href="#features"
+            onclick="toggleMenu()"
+          >
+            Features
+          </a>
         </li>
+
+        <li>
+          <a
+            href="#documentation"
+            onclick="toggleMenu()"
+          >
+            Documentation
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#gallery"
+            onclick="toggleMenu()"
+          >
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#video"
+            onclick="toggleMenu()"
+          >
+            Video
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#code"
+            onclick="toggleMenu()"
+          >
+            Code
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#learned"
+            onclick="toggleMenu()"
+          >
+            What I Learned
+          </a>
+        </li>
+
       </div>
 
     </div>
+
   </nav>
 
 
-  <!-- ==================== PROJECT INTRO ==================== -->
+
+  <!-- ==================================================
+       PROJECT INTRO
+  ================================================== -->
 
   <section id="profile">
 
@@ -79,6 +201,7 @@
         Short description of the project
       </p>
 
+
       <div class="btn-container">
 
         <button
@@ -87,6 +210,7 @@
         >
           Github
         </button>
+
 
         <button
           class="btn btn-color-1"
@@ -102,9 +226,12 @@
   </section>
 
 
-  <!-- ==================== PROJECT OVERVIEW ==================== -->
 
-  <section id="about">
+  <!-- ==================================================
+       OVERVIEW
+  ================================================== -->
+
+  <section id="overview">
 
     <p class="section__text__p1">
       About The Project
@@ -113,6 +240,7 @@
     <h1 class="title">
       Overview
     </h1>
+
 
     <div class="section-container">
 
@@ -126,7 +254,8 @@
             Explain what the project is, why you created it,
             what problem it solves, and what your role was.
 
-            This can be several paragraphs if necessary.
+            This section can contain multiple paragraphs
+            if necessary.
           </p>
 
         </div>
@@ -138,9 +267,12 @@
   </section>
 
 
-  <!-- ==================== TECHNOLOGIES ==================== -->
 
-  <section id="experience">
+  <!-- ==================================================
+       TECH STACK
+  ================================================== -->
+
+  <section id="tech-stack">
 
     <p class="section__text__p1">
       Technologies Used
@@ -150,9 +282,13 @@
       Tech Stack
     </h1>
 
+
     <div class="experience-details-container">
 
       <div class="about-containers">
+
+
+        <!-- FRONTEND -->
 
         <div class="details-container">
 
@@ -160,9 +296,11 @@
             Frontend
           </h2>
 
+
           <div class="article-container">
 
             <article>
+
               <img
                 src="../assets/checkmark.png"
                 alt="Technology icon"
@@ -170,12 +308,22 @@
               />
 
               <div>
-                <h3>React</h3>
-                <p>Used for...</p>
+
+                <h3>
+                  React
+                </h3>
+
+                <p>
+                  Used for...
+                </p>
+
               </div>
+
             </article>
 
+
             <article>
+
               <img
                 src="../assets/checkmark.png"
                 alt="Technology icon"
@@ -183,15 +331,26 @@
               />
 
               <div>
-                <h3>JavaScript</h3>
-                <p>Used for...</p>
+
+                <h3>
+                  JavaScript
+                </h3>
+
+                <p>
+                  Used for...
+                </p>
+
               </div>
+
             </article>
 
           </div>
 
         </div>
 
+
+
+        <!-- BACKEND / OTHER -->
 
         <div class="details-container">
 
@@ -199,9 +358,11 @@
             Backend / Other
           </h2>
 
+
           <div class="article-container">
 
             <article>
+
               <img
                 src="../assets/checkmark.png"
                 alt="Technology icon"
@@ -209,12 +370,22 @@
               />
 
               <div>
-                <h3>Node.js</h3>
-                <p>Used for...</p>
+
+                <h3>
+                  Node.js
+                </h3>
+
+                <p>
+                  Used for...
+                </p>
+
               </div>
+
             </article>
 
+
             <article>
+
               <img
                 src="../assets/checkmark.png"
                 alt="Technology icon"
@@ -222,14 +393,23 @@
               />
 
               <div>
-                <h3>PostgreSQL</h3>
-                <p>Used for...</p>
+
+                <h3>
+                  PostgreSQL
+                </h3>
+
+                <p>
+                  Used for...
+                </p>
+
               </div>
+
             </article>
 
           </div>
 
         </div>
+
 
       </div>
 
@@ -238,9 +418,12 @@
   </section>
 
 
-  <!-- ==================== FEATURES ==================== -->
 
-  <section>
+  <!-- ==================================================
+       FEATURES
+  ================================================== -->
+
+  <section id="features">
 
     <p class="section__text__p1">
       What It Does
@@ -250,9 +433,13 @@
       Features
     </h1>
 
+
     <div class="experience-details-container">
 
       <div class="about-containers">
+
+
+        <!-- FEATURE 1 -->
 
         <div class="details-container">
 
@@ -268,6 +455,9 @@
         </div>
 
 
+
+        <!-- FEATURE 2 -->
+
         <div class="details-container">
 
           <h2 class="experience-sub-title">
@@ -275,11 +465,15 @@
           </h2>
 
           <p>
-            Explain another important feature.
+            Explain another important feature
+            and how it works.
           </p>
 
         </div>
 
+
+
+        <!-- FEATURE 3 -->
 
         <div class="details-container">
 
@@ -288,10 +482,12 @@
           </h2>
 
           <p>
-            Explain another feature.
+            Explain another important feature
+            and how it works.
           </p>
 
         </div>
+
 
       </div>
 
@@ -300,9 +496,12 @@
   </section>
 
 
-  <!-- ==================== DOCUMENTATION ==================== -->
 
-  <section>
+  <!-- ==================================================
+       DOCUMENTATION
+  ================================================== -->
+
+  <section id="documentation">
 
     <p class="section__text__p1">
       Development Process
@@ -311,6 +510,7 @@
     <h1 class="title">
       Documentation
     </h1>
+
 
     <div class="section-container">
 
@@ -326,7 +526,9 @@
             and important decisions you made.
           </p>
 
+
           <br />
+
 
           <p>
             You can add additional documentation,
@@ -342,9 +544,12 @@
   </section>
 
 
-  <!-- ==================== PROJECT PHOTOS ==================== -->
 
-  <section>
+  <!-- ==================================================
+       GALLERY
+  ================================================== -->
+
+  <section id="gallery">
 
     <p class="section__text__p1">
       See The Project
@@ -354,9 +559,13 @@
       Gallery
     </h1>
 
+
     <div class="experience-details-container">
 
       <div class="about-containers">
+
+
+        <!-- IMAGE 1 -->
 
         <div class="details-container color-container">
 
@@ -370,12 +579,16 @@
 
           </div>
 
+
           <h2 class="experience-sub-title project-title">
             Screenshot One
           </h2>
 
         </div>
 
+
+
+        <!-- IMAGE 2 -->
 
         <div class="details-container color-container">
 
@@ -389,12 +602,16 @@
 
           </div>
 
+
           <h2 class="experience-sub-title project-title">
             Screenshot Two
           </h2>
 
         </div>
 
+
+
+        <!-- IMAGE 3 -->
 
         <div class="details-container color-container">
 
@@ -408,11 +625,13 @@
 
           </div>
 
+
           <h2 class="experience-sub-title project-title">
             Screenshot Three
           </h2>
 
         </div>
+
 
       </div>
 
@@ -421,9 +640,12 @@
   </section>
 
 
-  <!-- ==================== VIDEO ==================== -->
 
-  <section>
+  <!-- ==================================================
+       VIDEO
+  ================================================== -->
+
+  <section id="video">
 
     <p class="section__text__p1">
       Project Demonstration
@@ -432,6 +654,7 @@
     <h1 class="title">
       Video
     </h1>
+
 
     <div class="section-container">
 
@@ -443,12 +666,14 @@
             controls
             width="100%"
           >
+
             <source
               src="../assets/project-video.mp4"
               type="video/mp4"
             />
 
             Your browser does not support video.
+
           </video>
 
         </div>
@@ -460,9 +685,12 @@
   </section>
 
 
-  <!-- ==================== CODE ==================== -->
 
-  <section>
+  <!-- ==================================================
+       CODE
+  ================================================== -->
+
+  <section id="code">
 
     <p class="section__text__p1">
       Source Code
@@ -471,6 +699,7 @@
     <h1 class="title">
       Code
     </h1>
+
 
     <div class="section-container">
 
@@ -483,7 +712,9 @@
             for this project on GitHub.
           </p>
 
+
           <br />
+
 
           <button
             class="btn btn-color-2"
@@ -501,9 +732,12 @@
   </section>
 
 
-  <!-- ==================== WHAT I LEARNED ==================== -->
 
-  <section>
+  <!-- ==================================================
+       WHAT I LEARNED
+  ================================================== -->
+
+  <section id="learned">
 
     <p class="section__text__p1">
       Reflection
@@ -512,6 +746,7 @@
     <h1 class="title">
       What I Learned
     </h1>
+
 
     <div class="section-container">
 
@@ -538,9 +773,12 @@
   </section>
 
 
-  <!-- ==================== BACK TO PROJECTS ==================== -->
 
-  <section>
+  <!-- ==================================================
+       BACK TO PROJECTS
+  ================================================== -->
+
+  <section class="project-back">
 
     <div class="btn-container">
 
@@ -556,7 +794,10 @@
   </section>
 
 
-  <!-- ==================== FOOTER ==================== -->
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
 
   <footer>
 
@@ -567,19 +808,39 @@
         <ul class="nav-links">
 
           <li>
-            <a href="../index.html#about">About</a>
+            <a href="../index.html">
+              Home
+            </a>
           </li>
 
           <li>
-            <a href="../index.html#experience">Experience</a>
+            <a href="#overview">
+              Overview
+            </a>
           </li>
 
           <li>
-            <a href="../index.html#projects">Projects</a>
+            <a href="#tech-stack">
+              Tech Stack
+            </a>
           </li>
 
           <li>
-            <a href="../index.html#contact">Contact</a>
+            <a href="#features">
+              Features
+            </a>
+          </li>
+
+          <li>
+            <a href="#documentation">
+              Documentation
+            </a>
+          </li>
+
+          <li>
+            <a href="#gallery">
+              Gallery
+            </a>
           </li>
 
         </ul>
@@ -588,14 +849,22 @@
 
     </nav>
 
+
     <p>
-      Copyright &#169; 2026 Randi Williams. All Rights Reserved.
+      Copyright &#169; 2026 Randi Williams.
+      All Rights Reserved.
     </p>
 
   </footer>
 
 
+
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
   <script src="../script.js"></script>
+
 
 </body>
 
