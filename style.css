@@ -552,10 +552,9 @@ footer p {
 }
 
 .project-page .arrow {
-  position: static;
-  display: block;
-  margin: 2rem auto 0;
-  cursor: pointer;
+ position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
 }
 
 /* Back button */
