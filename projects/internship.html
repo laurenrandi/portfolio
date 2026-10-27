@@ -1,237 +1,302 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    http-equiv="X-UA-Compatible"
-    content="IE=edge"
-  />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <title>Internship Project | Randi Williams</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../mediaqueries.css" />
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="../assets/favicon.png"
-  />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-  <title>
-    Internship Project | Randi Williams
-  </title>
+    html {
+      width: 100%;
+      max-width: 100%;
+      scroll-behavior: smooth;
+    }
 
-  <link
-    rel="stylesheet"
-    href="../style.css"
-  />
+    body.project-page {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      overflow-x: hidden;
+    }
 
-  <link
-    rel="stylesheet"
-    href="../mediaqueries.css"
-  />
+    .project-page section {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-left: clamp(16px, 3vw, 48px);
+      padding-right: clamp(16px, 3vw, 48px);
+    }
 
+    /* Center the main content containers */
+    .project-page .section-container,
+    .project-page .about-details-container,
+    .project-page .experience-details-container,
+    .project-page .about-containers {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Keep headings centered */
+    .project-page .section__text__p1,
+    .project-page .title,
+    .project-page .experience-sub-title {
+      text-align: center;
+    }
+
+    /* Keep descriptive text left-aligned */
+    .project-page .text-container {
+      width: 100%;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .project-page .text-container p {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+      line-height: 1.7;
+    }
+
+    /* General paragraphs should not all be centered */
+    .project-page p {
+      line-height: 1.7;
+    }
+
+    /* Project introduction */
+    #profile .section__text {
+      text-align: center;
+    }
+
+    #profile .section__text__p1,
+    #profile .section__text__p2 {
+      text-align: center;
+    }
+
+    /* Videos stay centered */
+    .project-page video,
+    .project-page .project-video {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      margin: 24px auto;
+      object-fit: contain;
+      border: none;
+      box-shadow: none;
+    }
+
+    /* Main presentation board */
+    .project-page .presentation-board {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      height: 520px;
+      margin: 24px auto;
+      object-fit: contain;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    /* Gallery layout */
+    .project-page .about-containers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    /* Remove outer borders and backgrounds around gallery items */
+    .project-page .details-container.color-container {
+      flex: 0 1 360px;
+      width: 100%;
+      max-width: 360px;
+      min-width: 0;
+      padding: 12px;
+      margin: 0;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border-radius: 0;
+      background: transparent !important;
+    }
+
+    .project-page .details-container.color-container .article-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border-radius: 0;
+      background: transparent !important;
+    }
+
+    /* Gallery images */
+    .project-page .project-img {
+      display: block;
+      width: 100%;
+      max-width: 336px;
+      height: 260px;
+      margin: 0 auto;
+      padding: 0;
+      object-fit: contain;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .project-page .project-title {
+      text-align: center;
+      margin: 16px auto;
+    }
+
+    .project-page .details-container {
+      min-width: 0;
+    }
+
+    .project-page .arrow {
+      display: block;
+      margin: 32px auto 0;
+    }
+
+    /* Skill and reflection cards */
+    .project-page .details-container:not(.color-container) p {
+      text-align: left;
+    }
+
+    /* Keep tech stack descriptions aligned consistently */
+    #documentation .text-container h2 {
+      text-align: center;
+    }
+
+    /* Back button */
+    .project-page .project-back .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .project-page section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .project-page .section-container,
+      .project-page .about-details-container,
+      .project-page .experience-details-container,
+      .project-page .about-containers,
+      .project-page .text-container {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .project-page video,
+      .project-page .project-video {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .project-page .about-containers {
+        gap: 20px;
+      }
+
+      .project-page .details-container.color-container {
+        flex-basis: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .project-page .project-img {
+        width: 100%;
+        max-width: 360px;
+        height: 220px;
+      }
+
+      .project-page .presentation-board {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
-
 
 <body class="project-page">
 
-
-  <!-- ==================================================
-       DESKTOP NAVIGATION
-  ================================================== -->
-
+  <!-- DESKTOP NAVIGATION -->
   <nav id="desktop-nav">
-
     <div>
-
       <ul class="nav-links">
-
-        <li>
-          <a href="../index.html#projects">
-            Back to Projects
-          </a>
-        </li>
-
-        <li>
-          <a href="#overview">
-            Overview
-          </a>
-        </li>
-
-        <li>
-          <a href="#showcase">
-            Showcase
-          </a>
-        </li>
-
-        <li>
-          <a href="#documentation">
-            Documentation
-          </a>
-        </li>
-
-        <li>
-          <a href="#code">
-            Code
-          </a>
-        </li>
-
-        <li>
-          <a href="#learned">
-            What I Learned
-          </a>
-        </li>
-
+        <li><a href="../index.html#projects">Back to Projects</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#learned">What I Learned</a></li>
       </ul>
-
     </div>
-
   </nav>
 
-
-
-  <!-- ==================================================
-       HAMBURGER NAVIGATION
-  ================================================== -->
-
+  <!-- HAMBURGER NAVIGATION -->
   <nav id="hamburger-nav">
-
     <div class="hamburger-menu">
-
-      <div
-        class="hamburger-icon"
-        onclick="toggleMenu()"
-      >
-
+      <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
-
       </div>
-
 
       <div class="menu-links">
-
-        <li>
-
-          <a
-            href="../index.html#projects"
-            onclick="toggleMenu()"
-          >
-            Back to Projects
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <a
-            href="#overview"
-            onclick="toggleMenu()"
-          >
-            Overview
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <a
-            href="#showcase"
-            onclick="toggleMenu()"
-          >
-            Showcase
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <a
-            href="#documentation"
-            onclick="toggleMenu()"
-          >
-            Documentation
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <a
-            href="#code"
-            onclick="toggleMenu()"
-          >
-            Code
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <a
-            href="#learned"
-            onclick="toggleMenu()"
-          >
-            What I Learned
-          </a>
-
-        </li>
-
+        <li><a href="../index.html#projects" onclick="toggleMenu()">Back to Projects</a></li>
+        <li><a href="#overview" onclick="toggleMenu()">Overview</a></li>
+        <li><a href="#showcase" onclick="toggleMenu()">Showcase</a></li>
+        <li><a href="#documentation" onclick="toggleMenu()">Documentation</a></li>
+        <li><a href="#code" onclick="toggleMenu()">Code</a></li>
+        <li><a href="#learned" onclick="toggleMenu()">What I Learned</a></li>
       </div>
-
     </div>
-
   </nav>
 
-
-
-  <!-- ==================================================
-       PROJECT INTRO
-  ================================================== -->
-
+  <!-- PROJECT INTRO -->
   <section id="profile">
-
     <div class="section__text">
-
-      <p class="section__text__p1">
-        Internship Project
-      </p>
-
-
-      <h1 class="title">
-        Full Stack Developer Internship
-      </h1>
-
-
+      <p class="section__text__p1">Internship Project</p>
+      <h1 class="title">Full Stack Developer Internship</h1>
       <p class="section__text__p2">
         Georgia Tech / Vngle Grassroots News Agency
       </p>
 
 
-      <div class="btn-container">
-
-        <button
-          class="btn btn-color-1"
-          onclick="window.open('LIVE-DEMO-LINK', '_blank')"
-        >
-          Live Demo
-        </button>
-
-      </div>
-
     </div>
-
 
     <img
       src="../assets/arrow.png"
@@ -239,120 +304,63 @@
       class="icon arrow"
       onclick="location.href='#overview'"
     />
-
   </section>
 
-
-
-  <!-- ==================================================
-       OVERVIEW
-  ================================================== -->
-
+  <!-- OVERVIEW -->
   <section id="overview">
-
-    <p class="section__text__p1">
-      About The Project
-    </p>
-
-
-    <h1 class="title">
-      Overview
-    </h1>
-
+    <p class="section__text__p1">About The Project</p>
+    <h1 class="title">Overview</h1>
 
     <div class="section-container">
-
       <div class="about-details-container">
-
         <div class="text-container">
-
           <p>
-            During my Full Stack Developer internship with
-            Georgia Tech and Vngle Grassroots News Agency,
-            I worked on web development projects as part of
-            a development team.
+            During my Full Stack Developer internship with Georgia Tech and
+            Vngle Grassroots News Agency, I worked on web development projects
+            as part of a development team.
           </p>
 
-
           <p>
-            The internship gave me experience working with
-            both front-end and back-end technologies while
-            contributing to an existing software project.
+            The internship gave me experience working with both front-end and
+            back-end technologies while contributing to an existing software
+            project.
           </p>
 
-
           <p>
-            My work included developing interfaces with
-            React, working with Node.js and PostgreSQL,
-            and gaining experience with the development
-            process used to build and maintain a full-stack
-            application.
+            My work included developing interfaces with React, working with
+            Node.js and PostgreSQL, and gaining experience with the development
+            process used to build and maintain a full-stack application.
           </p>
-
         </div>
-
       </div>
-
     </div>
-
-
-
-    <!-- FEATURES -->
 
     <div class="experience-details-container">
-
       <div class="about-containers">
-
-
         <div class="details-container">
-
-          <h2 class="experience-sub-title">
-            Front-End Development
-          </h2>
-
+          <h2 class="experience-sub-title">Front-End Development</h2>
           <p>
-            Built and worked with React interfaces while
-            developing features for the application.
+            Built and worked with React interfaces while developing features
+            for the application.
           </p>
-
         </div>
 
-
-
         <div class="details-container">
-
-          <h2 class="experience-sub-title">
-            Back-End Development
-          </h2>
-
+          <h2 class="experience-sub-title">Back-End Development</h2>
           <p>
-            Worked with Node.js to support application
-            functionality and communication between
-            different parts of the system.
+            Worked with Node.js to support application functionality and
+            communication between different parts of the system.
           </p>
-
         </div>
 
-
-
         <div class="details-container">
-
-          <h2 class="experience-sub-title">
-            Database Development
-          </h2>
-
+          <h2 class="experience-sub-title">Database Development</h2>
           <p>
-            Worked with PostgreSQL while developing and
-            managing application data.
+            Worked with PostgreSQL while developing and managing application data.
           </p>
-
         </div>
-
-
       </div>
-
     </div>
-
 
     <img
       src="../assets/arrow.png"
@@ -360,139 +368,37 @@
       class="icon arrow"
       onclick="location.href='#showcase'"
     />
-
   </section>
 
-
-
-  <!-- ==================================================
-       PROJECT SHOWCASE
-  ================================================== -->
-
+  <!-- PROJECT SHOWCASE -->
   <section id="showcase">
-
-    <p class="section__text__p1">
-      See The Project
-    </p>
-
-
-    <h1 class="title">
-      Project Showcase
-    </h1>
-
-
-
-    <!-- VIDEO -->
+    <p class="section__text__p1">See The Project</p>
+    <h1 class="title">Final Project Presentation at Georgia Tech</h1>
 
     <div class="section-container">
-
       <div class="about-details-container">
-
         <div class="text-container">
-
-          <video controls width="100%">
-
-            <source
-              src="../assets/internship-video.mp4"
-              type="video/mp4"
-            />
-
+          <video class="project-video" controls playsinline preload="metadata">
+            <source src="../assets/presentation.mp4" type="video/mp4" />
             Your browser does not support video.
-
           </video>
-
         </div>
-
       </div>
-
     </div>
 
+    <h1 class="title">PROJECT BOARD</h1>
 
-
-    <!-- GALLERY -->
-
-    <h2 class="experience-sub-title">
-      Gallery
-    </h2>
-
-
-    <div class="experience-details-container">
-
-      <div class="about-containers">
-
-
-        <!-- IMAGE 1 -->
-
-        <div class="details-container color-container">
-
-          <div class="article-container">
-
-            <img
-              src="../assets/pin.png"
-              alt="Internship project interface"
-              class="project-img"
-            />
-
-          </div>
-
-
-          <h2 class="experience-sub-title project-title">
-            Application Interface
-          </h2>
-
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="text-container">
+          <img
+            src="../assets/pin.png"
+            alt="Presentation board"
+            class="project-image presentation-board"
+          />
         </div>
-
-
-
-        <!-- IMAGE 2 -->
-
-        <div class="details-container color-container">
-
-          <div class="article-container">
-
-            <img
-              src="../assets/pin.png"
-              alt="Internship project feature"
-              class="project-img"
-            />
-
-          </div>
-
-
-          <h2 class="experience-sub-title project-title">
-            Project Feature
-          </h2>
-
-        </div>
-
-
-
-        <!-- IMAGE 3 -->
-
-        <div class="details-container color-container">
-
-          <div class="article-container">
-
-            <img
-              src="../assets/pin.png"
-              alt="Internship project development"
-              class="project-img"
-            />
-
-          </div>
-
-
-          <h2 class="experience-sub-title project-title">
-            Development
-          </h2>
-
-        </div>
-
-
       </div>
-
     </div>
-
 
     <img
       src="../assets/arrow.png"
@@ -500,100 +406,201 @@
       class="icon arrow"
       onclick="location.href='#documentation'"
     />
-
   </section>
 
-
-
-  <!-- ==================================================
-       DOCUMENTATION
-  ================================================== -->
-
+  <!-- DOCUMENTATION -->
   <section id="documentation">
-
-    <p class="section__text__p1">
-      Development Process
-    </p>
-
-
-    <h1 class="title">
-      Documentation
-    </h1>
-
+    <p class="section__text__p1">Development Process</p>
+    <h1 class="title">Documentation</h1>
 
     <div class="section-container">
-
       <div class="about-details-container">
-
         <div class="text-container">
-
           <p>
-            This internship gave me experience working on
-            a real development project rather than building
-            an application entirely on my own.
+            This internship gave me experience working on a real development
+            project rather than building an application entirely on my own.
           </p>
 
-
           <p>
-            I worked with an existing codebase and gained
-            experience understanding how different parts
-            of a full-stack application fit together.
+            I worked with an existing codebase and gained experience understanding
+            how different parts of a full-stack application fit together.
           </p>
 
-
           <p>
-            My responsibilities involved developing and
-            modifying application features while working
-            with front-end, back-end, and database
-            technologies.
+            My responsibilities involved developing and modifying application
+            features while working with front-end, back-end, and database technologies.
           </p>
 
-
           <p>
-            Working in an internship environment also gave
-            me experience with collaborative development,
-            working through technical problems, and
+            Working in an internship environment also gave me experience with
+            collaborative development, working through technical problems, and
             contributing to a larger software project.
           </p>
 
-
-          <!-- TECH STACK -->
-
-          <h2 class="experience-sub-title">
-            Tech Stack
-          </h2>
-
+          <h2>My Work</h2>
 
           <p>
-            <strong>React</strong> — Used to build and
-            develop front-end interfaces and components.
-          </p>
+  This demonstration covers the data workflow connecting the Vngle
+  application to its editorial management system. Data collected through
+  the application is sent to AWS for storage and then transferred to
+  Drupal, where it can be organized and managed by the editorial team.
+  This workflow supports reviewing submissions, searching and filtering
+  content, editing descriptions, and approving content for publication.
+</p>
 
+          <video class="project-video" controls playsinline preload="metadata">
+            <source
+              src="../assets/EditorDatatoDynamoDB (1).mp4"
+              type="video/mp4"
+            />
+            Your browser does not support video.
+          </video>
+  This walkthrough demonstrates the Drupal-based editor tool used to
+  manage content received from the Vngle application. My primary
+  contributions focused on developing the user interface and implementing
+  the search functionality in Drupal using PHP. The tool enables editors
+  to find and review submissions, navigate content, edit descriptions,
+  and approve items as part of the editorial workflow.
+          <video class="project-video" controls playsinline preload="metadata">
+            <source
+              src="../assets/VngleEditorWalkthroughv1 (1).mp4"
+              type="video/mp4"
+            />
+            Your browser does not support video.
+          </video>
+        </div>
+      </div>
+    </div>
 
-          <p>
-            <strong>Node.js</strong> — Used for
-            back-end development and application
-            functionality.
-          </p>
+    <!-- ONA CONFERENCE GRAPHIC DESIGNS -->
+    <h2 class="experience-sub-title">ONA Conference Graphic Designs</h2>
 
-
-          <p>
-            <strong>PostgreSQL</strong> — Used for
-            storing and working with application data.
-          </p>
-
-
-          <p>
-            <strong>Git / GitHub</strong> — Used for
-            version control and managing project code.
-          </p>
-
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="../assets/ini.png"
+              alt="Conference graphic design 1"
+              class="project-img project-image"
+            />
+          </div>
         </div>
 
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="../assets/internart3.png"
+              alt="Conference graphic design 2"
+              class="project-img project-image"
+            />
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="../assets/internart2.png"
+              alt="Conference graphic design 3"
+              class="project-img project-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <!-- INTERN MINI PROJECTS -->
+    <h2 class="experience-sub-title">Intern Mini Projects</h2>
+
+    <div class="mini-projects-container">
+
+      <div class="mini-project">
+        <h2 class="experience-sub-title project-title">
+          Yourself as a Product
+        </h2>
+
+        <p>
+          A mini project focused on presenting myself as a product,
+          highlighting my skills, strengths, and professional identity.
+        </p>
+
+        <div class="mini-project-media">
+          <img 
+            src="../assets/internproj1.png"
+            alt="Yourself as a Product project"
+            class="mini-project-image"
+          />
+          
+
+      
+        </div>
+        <div class="mini-project">
+        <h2 class="experience-sub-title project-title">
+          Vngle Promo Video
+        </h2>
+
+        <p>
+          A mini project focused on creating a promotional video for Vngle,
+          highlighting the features and benefits of the platform.
+        </p>
+
+    
+
+
+          <video
+            class="mini-project-video"
+            controls
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="../assets/internproj2.MP4"
+              type="video/mp4"
+            />
+            Your browser does not support video.
+          </video>
+        </div>
+     
       </div>
 
     </div>
 
+
+
+    <!-- DOCUMENTS -->
+    <h2 class="experience-sub-title">Documents</h2>
+    <div class="experience-details-container"></div>
+
+    <!-- TECH STACK -->
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="text-container">
+          <h2 class="experience-sub-title">Tech Stack</h2>
+
+          <p>
+            <strong>React</strong> — Used to build and develop
+            front-end interfaces and components.
+          </p>
+
+          <p>
+            <strong>Node.js</strong> — Used for back-end development
+            and application functionality.
+          </p>
+
+          <p>
+            <strong>PostgreSQL</strong> — Used for storing and
+            working with application data.
+          </p>
+
+          <p>
+            <strong>Git / GitHub</strong> — Used for version control
+            and managing project code.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <img
       src="../assets/arrow.png"
@@ -601,101 +608,37 @@
       class="icon arrow"
       onclick="location.href='#code'"
     />
-
   </section>
 
-
-
-  <!-- ==================================================
-       CODE + WHAT I LEARNED
-  ================================================== -->
-
+  <!-- WHAT I LEARNED -->
   <section id="code">
-
-    <p class="section__text__p1">
-      Source Code & Reflection
-    </p>
-
-
-    <h1 class="title">
-      Code & What I Learned
-    </h1>
-
+    <p class="section__text__p1">Reflection</p>
+    <h1 class="title">What I Learned</h1>
 
     <div class="experience-details-container">
-
       <div class="about-containers">
-
-
-        <!-- SOURCE CODE -->
-
-        <div class="details-container">
-
-          <h2 class="experience-sub-title">
-            Source Code
-          </h2>
-
+        <div class="details-container" id="learned">
+          <h2 class="experience-sub-title">What I Learned</h2>
 
           <p>
-            The source code for this project is not publicly
-            available because it was developed as part of
-            an internship project.
+            This internship helped me develop a better understanding of full-stack
+            web development and how front-end, back-end, and database technologies
+            work together.
           </p>
 
-
-          <br />
-
-
           <p>
-            Project materials and screenshots are included
-            in the showcase above to demonstrate my work.
+            I gained practical experience working with React, Node.js, and
+            PostgreSQL while contributing to an existing application.
           </p>
 
-        </div>
-
-
-
-        <!-- WHAT I LEARNED -->
-
-        <div
-          class="details-container"
-          id="learned"
-        >
-
-          <h2 class="experience-sub-title">
-            What I Learned
-          </h2>
-
-
           <p>
-            This internship helped me develop a better
-            understanding of full-stack web development
-            and how front-end, back-end, and database
-            technologies work together.
-          </p>
-
-
-          <p>
-            I gained practical experience working with
-            React, Node.js, and PostgreSQL while contributing
-            to an existing application.
-          </p>
-
-
-          <p>
-            I also learned how to navigate an existing
-            codebase, work through technical problems, and
-            contribute to a software project in a
+            I also learned how to navigate an existing codebase, work through
+            technical problems, and contribute to a software project in a
             professional development environment.
           </p>
-
         </div>
-
-
       </div>
-
     </div>
-
 
     <img
       src="../assets/arrow.png"
@@ -703,107 +646,37 @@
       class="icon arrow"
       onclick="location.href='#profile'"
     />
-
   </section>
 
-
-
-  <!-- ==================================================
-       BACK TO PROJECTS
-  ================================================== -->
-
+  <!-- BACK TO PROJECTS -->
   <section class="project-back">
-
     <div class="btn-container">
-
       <button
         class="btn btn-color-2"
         onclick="location.href='../index.html#projects'"
       >
         ← Back to Projects
       </button>
-
     </div>
-
   </section>
 
-
-
-  <!-- ==================================================
-       FOOTER
-  ================================================== -->
-
+  <!-- FOOTER -->
   <footer>
-
     <nav>
-
       <div class="nav-links-container">
-
         <ul class="nav-links">
-
-          <li>
-            <a href="../index.html#projects">
-              Back to Projects
-            </a>
-          </li>
-
-
-          <li>
-            <a href="#overview">
-              Overview
-            </a>
-          </li>
-
-
-          <li>
-            <a href="#showcase">
-              Showcase
-            </a>
-          </li>
-
-
-          <li>
-            <a href="#documentation">
-              Documentation
-            </a>
-          </li>
-
-
-          <li>
-            <a href="#code">
-              Code
-            </a>
-          </li>
-
-
-          <li>
-            <a href="#learned">
-              What I Learned
-            </a>
-          </li>
-
+          <li><a href="../index.html#projects">Back to Projects</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+          <li><a href="#learned">What I Learned</a></li>
         </ul>
-
       </div>
-
     </nav>
 
-
-    <p>
-      Copyright &#169; 2026 Randi Williams.
-      All Rights Reserved.
-    </p>
-
+    <p>Copyright &#169; 2026 Randi Williams. All Rights Reserved.</p>
   </footer>
 
-
-
-  <!-- ==================================================
-       JAVASCRIPT
-  ================================================== -->
-
   <script src="../script.js"></script>
-
 </body>
-
 </html>

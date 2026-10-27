@@ -1,128 +1,126 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <title>Randi's Portfolio</title>
+
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <title>Randi Williams | Software Developer</title>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
+
   <body>
+    <!-- DESKTOP NAVIGATION -->
     <nav id="desktop-nav">
+      <div class="nav-brand">
+        <a href="#profile">Randi Williams</a>
+      </div>
+
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
+
+    <!-- MOBILE NAVIGATION -->
     <nav id="hamburger-nav">
+      <div class="nav-brand">
+        <a href="#profile">Randi Williams</a>
+      </div>
+
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
         </div>
+
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
+
+    <!-- HERO / INTRODUCTION -->
     <section id="profile">
-      <div class="section__text">
-        <!-- <p class="section__text__p1">Hello, I'm</p> -->
-        <h1 class="title">Randi Williams</h1>
-        <p class="section__text__p2">Software Engineer</p>
+      <div class="hero-intro">
+        <p class="section__text__p1">WELCOME TO MY PORTFOLIO</p>
+
+        <h1 class="hero-heading">Explore my work.</h1>
+
+        <p class="hero-description">
+          I'm Randi Williams, a Computer Science graduate who enjoys
+          building web applications, interactive experiences, and
+          software that solves real-world problems. Explore my projects
+          to see what I've been working on.
+        </p>
+
         <div class="btn-container">
+          <button
+            class="btn btn-color-1"
+            onclick="location.href='#projects'"
+          >
+            Explore My Projects
+          </button>
+
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/randiresume.pdf', '_blank')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="window.open('https://github.com/laurenrandi', '_blank')"
-          />
-        </div>
-      </div> 
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Computer Science</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-                Hello! I'm skoopy Randi Williams, a senior Computer Science major
-                 with a passion for programming and problem-solving. My 
-                 journey through undergrad has been exciting and transformative.
-                I've explored various areas of computer science, from algorithms
-                 and data structures to computer graphics and virtual reality. My projects
-                  include developing a web app, vr learning system, and a winforms
-                   application to name a few.
-                I'm driven by the potential of computer science to solve real-world problems.
-                 As I approach graduation, I'm eager to apply my skills professionally 
-                 and continue learning and innovating. Thank you for visiting my 
-                 portfolio—feel free to explore my work and connect with me!
-            </p>
-          </div>
+
+        <div id="socials-container" class="hero-socials">
+          <a
+            href="https://www.linkedin.com/in/laurenrandiwilliams/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+          >
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn"
+              class="icon"
+            />
+          </a>
+
+          <a
+            href="https://github.com/laurenrandi"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+          >
+            <img
+              src="./assets/github.png"
+              alt="GitHub"
+              class="icon"
+            />
+          </a>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-  
-<section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section__text__p1">A selection of</p>
       <h1 class="title">Projects</h1>
+
       <div class="experience-details-container">
         <div class="about-containers">
-          
+
+          <!-- CREATIVE CORNER -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
@@ -131,254 +129,353 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Randi's Creative Corner</h2>
+
+            <h2 class="experience-sub-title project-title">
+              Randi's Creative Corner
+            </h2>
+
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='./projects/creative-corner.html'"
               >
                 View Project
-</button>
+              </button>
             </div>
           </div>
+
+          <!-- SPARQ -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/sparqphoto.JPG"
-                alt="Project 1"
+                alt="Colleague Profile Builder application"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Colleague Profile Builder</h2>
+
+            <h2 class="experience-sub-title project-title">
+              Colleague Profile Builder
+            </h2>
+
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='./projects/sparq.html'"
               >
                 View Project
-</button>
+              </button>
             </div>
           </div>
+
+          <!-- VR LANGUAGE LEARNING -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/vrml.png"
-                alt="VR/ML Language Learning System"
+                alt="VR and machine learning language learning system"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">VR/ML Language Learner</h2>
+
+            <h2 class="experience-sub-title project-title">
+              VR/ML Language Learner
+            </h2>
+
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='./projects/vr-language.html'"
               >
                 View Project
-</button>
+              </button>
             </div>
           </div>
+
+          <!-- INTERNSHIP -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/pin.png"
-                alt="Internship Project"
+                alt="Internship project"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Internship Project</h2>
+
+            <h2 class="experience-sub-title project-title">
+              Internship Project
+            </h2>
+
             <div class="btn-container">
-             <button
+              <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='./projects/internship.html'"
               >
                 View Project
-</button>
+              </button>
             </div>
           </div>
+
+          <!-- RESTAURANT MANAGEMENT -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/rms.png"
-                alt="Restaurant Management System"
+                alt="Restaurant management system"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Restaurant Manager</h2>
+
+            <h2 class="experience-sub-title project-title">
+              Restaurant Manager
+            </h2>
+
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='./projects/restaurant.html'"
               >
                 View Project
-</button>
+              </button>
             </div>
           </div>
+
+          <!-- CROP TAILS -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/croptails.png"
-                alt="Croptails"
+                alt="Croptails video game"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Video Game: Croptails</h2>
+
+            <h2 class="experience-sub-title project-title">
+              Video Game: Croptails
+            </h2>
+
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='./projects/croptails.html'"
               >
                 View Project
-</button>
+              </button>
             </div>
+          </div>
+
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow to About Me"
+        class="icon arrow"
+        onclick="location.href='#about'"
+      />
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+      <p class="section__text__p1">Get to know more</p>
+      <h1 class="title">About Me</h1>
+
+      <div class="section-container">
+        <div class="about-details-container">
+
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+
+              <h3>Education</h3>
+              <p>B.Sc. Computer Science</p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p>
+              Hello! I'm Randi Williams, a Computer Science graduate
+              with a passion for programming, problem-solving, and
+              building technology that makes a difference. Throughout
+              my studies, I explored various areas of computer science,
+              including web development, databases, computer graphics,
+              and virtual reality. My projects include a full-stack
+              web application, a VR language-learning system, and a
+              Windows Forms restaurant management application. I'm
+              always looking for opportunities to strengthen my
+              technical skills, learn new technologies, and apply my
+              knowledge to real-world challenges. Thank you for
+              visiting my portfolio! Feel free to explore my work
+              and connect with me.
+            </p>
           </div>
         </div>
       </div>
+
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Arrow to Projects"
         class="icon arrow"
-        onclick="location.href='./#contact'"
+        onclick="location.href='#experience'"
       />
     </section>
-    
-    </section>
+
+    <!-- EXPERIENCE / SKILLS -->
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <p class="section__text__p1">Technologies I work with</p>
+      <h1 class="title">Skills</h1>
+
       <div class="experience-details-container">
         <div class="about-containers">
+
+          <!-- FRONTEND DEVELOPMENT -->
           <div class="details-container">
             <h2 class="experience-sub-title">Frontend Development</h2>
+
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>HTML</h3><p>Experienced</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>CSS</h3><p>Experienced</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>JavaScript</h3><p>Intermediate</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>React.js</h3><p>Intermediate</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Figma</h3><p>Familiar</p></div>
               </article>
             </div>
           </div>
+
+          <!-- BACKEND DEVELOPMENT -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Backend Development</h2>
+
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Python</h3><p>Intermediate</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Java</h3><p>Intermediate</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>C#</h3><p>Intermediate</p></div>
               </article>
+
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>PHP</h3><p>Familiar</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Node.js</h3><p>Intermediate</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Spring Boot</h3><p>Familiar</p></div>
               </article>
             </div>
           </div>
+
+          <!-- DATABASES -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Databases</h2>
+
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>MySQL</h3><p>Familiar</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>PostgreSQL</h3><p>Intermediate</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>SQLite</h3><p>Intermediate</p></div>
+              </article>
+            </div>
+          </div>
+
+          <!-- TOOLS AND PLATFORMS -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools &amp; Platforms</h2>
+
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Visual Studio</h3><p>Intermediate</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Git</h3><p>Intermediate</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>GitHub</h3><p>Intermediate</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>AWS (EC2/S3)</h3><p>Familiar</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>Unity</h3><p>Intermediate</p></div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div><h3>XAMPP</h3><p>Familiar</p></div>
+              </article>
+            </div>
+          </div>
+
         </div>
       </div>
+
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Arrow to Contact"
         class="icon arrow"
-        onclick="location.href='./#projects'"
+        onclick="location.href='#contact'"
       />
     </section>
+
+    <!-- CONTACT -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <p class="section__text__p1">Have a project or opportunity?</p>
+      <h1 class="title">Get in Touch</h1>
+
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -386,31 +483,68 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="lwilliams18@augusta.edu">lwilliams18@augusta.edu</a></p>
+
+          <p>
+            <a href="mailto:lwilliams18@augusta.edu">
+              lwilliams18@augusta.edu
+            </a>
+          </p>
         </div>
+
         <div class="contact-info-container">
           <img
             src="./assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a  onclick="window.open('https://www.linkedin.com/in/laurenrandiwilliams/', '_blank')">LinkedIn</a></p>
+
+          <p>
+            <a
+              href="https://www.linkedin.com/in/laurenrandiwilliams/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="GitHub icon"
+            class="icon contact-icon"
+          />
+
+          <p>
+            <a
+              href="https://github.com/laurenrandi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </p>
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Randi Williams. All Rights Reserved.</p>
+
+      <p>Copyright &#169; 2026 Randi Williams. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

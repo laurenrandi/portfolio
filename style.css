@@ -621,3 +621,279 @@ footer p {
 .project-page footer {
   margin-top: 1rem;
 }
+
+.game-embed-container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+
+.game-embed {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: white;
+}
+
+.presentation-board {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+/* RMS PDF Documentation */
+#documentation {
+  padding: 4rem 0;
+}
+
+.pdf-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.pdf-container iframe {
+  display: block;
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
+.pdf-download {
+  margin-top: 1rem;
+}
+
+.pdf-download a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .pdf-container {
+    width: 95%;
+  }
+
+  .pdf-container iframe {
+    height: 500px;
+  }
+}
+
+/* ========================================
+   PROJECT-FIRST PORTFOLIO HOMEPAGE
+======================================== */
+
+/* Desktop navigation */
+#desktop-nav {
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.nav-brand a {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Hero section */
+#profile {
+  height: auto;
+  min-height: 60vh;
+  padding: 6rem 5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-intro {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+}
+
+.hero-intro .section__text__p1 {
+  text-align: left;
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+}
+
+.hero-heading {
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1.05;
+  margin: 1rem 0 1.5rem;
+}
+
+.hero-description {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgb(85, 85, 85);
+}
+
+.hero-intro .btn-container {
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.hero-socials {
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+/* Projects */
+#projects {
+  padding-top: 2rem;
+}
+
+#projects .title {
+  margin-bottom: 2rem;
+}
+
+#projects .project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Skill text alignment */
+#experience .article-container article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#experience .article-container article div {
+  text-align: left;
+}
+
+#experience .article-container article h3,
+#experience .article-container article p {
+  margin: 0;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+
+  #profile {
+    min-height: auto;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-intro .btn-container {
+    flex-wrap: wrap;
+  }
+
+  #projects {
+    padding-top: 2rem;
+  }
+
+  #projects .project-img {
+    height: 200px;
+  }
+}
+
+
+    /* INTERN MINI PROJECTS */
+    .project-page .mini-projects-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .project-page .mini-project {
+      width: 100%;
+      text-align: left;
+    }
+
+    .project-page .mini-project > .experience-sub-title {
+      text-align: left;
+      margin: 20px 0 12px;
+    }
+
+    .project-page .mini-project > p {
+      text-align: left;
+      margin: 0 0 20px;
+      line-height: 1.7;
+    }
+
+    .project-page .mini-project-media {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .project-page .mini-project-image,
+    .project-page .mini-project-video {
+      display: block;
+      width: 100%;
+      height: 350px;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      object-fit: contain;
+      background: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .project-page .mini-project-caption {
+      text-align: right;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .project-page .mini-project-media {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-page .mini-project-image,
+      .project-page .mini-project-video {
+        height: auto;
+        max-height: 400px;
+      }
+
+      .project-page .mini-project-image {
+        width: 100%;
+      }
+
+      .project-page .mini-project-caption {
+        text-align: left;
+      }
+    }
+
+.project-page .mini-project-image {
+  display: block;
+  margin: 0 auto;
+}
