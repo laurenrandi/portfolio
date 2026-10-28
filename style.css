@@ -1,51 +1,31 @@
-/* GENERAL */
+
+/* ==================================================
+   GENERAL
+================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 p {
   color: rgb(85, 85, 85);
 }
 
-
-/* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
-}
-
-
-/* DESKTOP NAV */
-
-nav,
-.nav-links {
-  display: flex;
-  gap: 3rem;
-}
-
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-}
-
-.nav-links {
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
 }
 
 a {
@@ -61,6 +41,29 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+nav,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  justify-content: space-around;
+  height: 17vh;
+  gap: 3rem;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
 .logo {
   font-size: 2rem;
 }
@@ -69,8 +72,24 @@ a:hover {
   cursor: default;
 }
 
+/* Homepage desktop navigation */
 
-/* HAMBURGER MENU */
+#desktop-nav {
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.nav-brand a {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   HAMBURGER NAVIGATION
+================================================== */
 
 #hamburger-nav {
   display: none;
@@ -85,8 +104,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
   width: 30px;
+  height: 24px;
   cursor: pointer;
 }
 
@@ -94,36 +113,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-  list-style: none;
-}
-
-.menu-links.open {
-  max-height: 300px;
+  transition: all 300ms ease-in-out;
 }
 
 .hamburger-icon.open span:first-child {
@@ -138,47 +128,73 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: max-height 300ms ease-in-out;
+  z-index: 10;
 }
 
-.hamburger-icon span:first-child {
-  opacity: 1;
+.menu-links.open {
+  max-height: 300px;
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
 }
 
 
-/* SECTIONS */
+/* ==================================================
+   GENERAL SECTIONS
+================================================== */
 
 section {
-  padding-top: 1vh;
   height: 96vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
   min-height: fit-content;
+  margin: 0 10rem;
+  padding-top: 1vh;
+  box-sizing: border-box;
 }
 
 .section-container {
   display: flex;
+  gap: 4rem;
 }
 
 
-/* PROFILE SECTION */
+/* ==================================================
+   PROFILE / HOMEPAGE HERO
+================================================== */
 
 #profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5rem;
-  height: 80vh;
+  height: auto;
+  min-height: 60vh;
+  padding: 6rem 5rem 3rem;
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
   width: 400px;
+  height: 400px;
   margin: auto 0;
 }
 
@@ -204,23 +220,85 @@ section {
   text-align: center;
 }
 
+#profile .section__text__p1 {
+  font-size: 1.4rem;
+}
+
+#profile .section__text__p2 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+#profile .title {
+  font-size: 5rem;
+  line-height: 1.05;
+  text-align: center;
+}
+
+/* Homepage hero content */
+
+.hero-intro {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+}
+
+.hero-intro .section__text__p1 {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+  text-align: left;
+}
+
+.hero-heading {
+  margin: 1rem 0 1.5rem;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1.05;
+}
+
+.hero-description {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgb(85, 85, 85);
+}
+
+.hero-intro .btn-container {
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.hero-socials {
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 
-/* ICONS */
+/* ==================================================
+   ICONS
+================================================== */
 
 .icon {
-  cursor: pointer;
   height: 2rem;
+  cursor: pointer;
+}
+
+article .icon,
+.contact-icon {
+  cursor: default;
 }
 
 
-/* BUTTONS */
+/* ==================================================
+   BUTTONS
+================================================== */
 
 .btn-container {
   display: flex;
@@ -229,21 +307,15 @@ section {
 }
 
 .btn {
-  font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem;
   width: 8rem;
+  padding: 1rem;
   border-radius: 2rem;
+  font-weight: 600;
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
+  border: 0.1rem solid rgb(53, 53, 53);
 }
 
 .btn-color-1,
@@ -253,7 +325,8 @@ section {
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: black;
+  cursor: pointer;
 }
 
 .btn-color-2 {
@@ -261,79 +334,66 @@ section {
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
-
-.btn-container {
-  gap: 1rem;
+  border-color: white;
+  cursor: pointer;
 }
 
 
-/* ABOUT SECTION */
+/* ==================================================
+   ABOUT SECTION
+================================================== */
 
 #about {
   position: relative;
 }
 
 .about-containers {
+  display: flex;
   gap: 2rem;
-  margin-bottom: 2rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers,
 .about-details-container {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-pic {
   border-radius: 2rem;
 }
 
+.details-container {
+  flex: 1;
+  padding: 1.5rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 2rem;
+  background: white;
+  text-align: center;
+}
+
 .arrow {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
-}
-
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  cursor: pointer;
 }
 
 
-/* EXPERIENCE SECTION */
+/* ==================================================
+   EXPERIENCE / SKILLS
+================================================== */
 
 #experience {
   position: relative;
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
   margin-bottom: 2rem;
+  color: rgb(85, 85, 85);
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 
 .experience-details-container {
@@ -344,34 +404,51 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 2.5rem;
+  text-align: initial;
 }
 
 article {
   display: flex;
-  width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
+  width: 10rem;
 }
 
-article .icon {
-  cursor: default;
+#experience .article-container article {
+  align-items: center;
+  gap: 1rem;
+}
+
+#experience .article-container article div {
+  text-align: left;
+}
+
+#experience .article-container article h3,
+#experience .article-container article p {
+  margin: 0;
 }
 
 
-/* PROJECTS SECTION */
+/* ==================================================
+   PROJECTS SECTION / HOMEPAGE
+================================================== */
 
 #projects {
   position: relative;
+  padding-top: 2rem;
+}
+
+#projects .title {
+  margin-bottom: 2rem;
 }
 
 #projects .about-containers {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 1rem;
 }
@@ -387,10 +464,14 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
   width: 90%;
   height: 250px;
+  border-radius: 2rem;
   object-fit: cover;
+}
+
+#projects .project-img {
+  width: 100%;
 }
 
 .project-title {
@@ -404,7 +485,9 @@ article .icon {
 }
 
 
-/* CONTACT */
+/* ==================================================
+   CONTACT
+================================================== */
 
 #contact {
   display: flex;
@@ -416,12 +499,11 @@ article .icon {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 2rem;
+  background: rgb(250, 250, 250);
 }
 
 .contact-info-container {
@@ -436,16 +518,14 @@ article .icon {
   font-size: larger;
 }
 
-.contact-icon {
-  cursor: default;
-}
-
 .email-icon {
   height: 2.5rem;
 }
 
 
-/* FOOTER SECTION */
+/* ==================================================
+   FOOTER
+================================================== */
 
 footer {
   height: 26vh;
@@ -457,24 +537,6 @@ footer p {
 }
 
 
-/* PROFILE TEXT */
-
-#profile .section__text__p1 {
-  font-size: 1.4rem;
-}
-
-#profile .section__text__p2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-#profile .title {
-  font-size: 5rem;
-  text-align: center;
-  line-height: 1.05;
-}
-
-
 /* ==================================================
    PROJECT PAGES
 ================================================== */
@@ -483,56 +545,23 @@ footer p {
   scroll-behavior: smooth;
 }
 
-
-/* PROJECT PAGE SECTIONS */
-
 .project-page section {
   position: relative;
-
-  /*
-    Override the original section height.
-    Project sections need to grow with their content.
-  */
   height: auto;
-
-  /*
-    Each section will still take up roughly a
-    full screen when there is not much content.
-  */
   min-height: 96vh;
-
-  /*
-    Keep the same horizontal spacing as
-    the original portfolio.
-  */
   margin: 0 10rem;
-
-  /*
-    Give the content room vertically.
-  */
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-
+  padding: 6rem 0;
   box-sizing: border-box;
 }
-
-
-/* PROJECT INTRO */
 
 .project-page #profile {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: auto;
   min-height: 80vh;
-
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding: 6rem 0;
 }
-
-
-/* SECTION HEADINGS */
 
 .project-page .section__text__p1 {
   margin-bottom: 0.5rem;
@@ -542,12 +571,9 @@ footer p {
   margin-bottom: 1.5rem;
 }
 
-
-/* CONTAINERS */
-
 .project-page .section-container {
-  margin-bottom: 2rem;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 .project-page .experience-details-container {
@@ -558,31 +584,19 @@ footer p {
   margin-bottom: 1rem;
 }
 
-
-/* INDIVIDUAL CARDS */
-
 .project-page .details-container {
   padding: 1.5rem;
 }
 
-
-/* TEXT */
-
 .project-page .text-container p {
   margin-bottom: 0.75rem;
 }
-
-
-/* PROJECT IMAGES */
 
 .project-page .project-img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
-
-
-/* PROJECT VIDEO */
 
 .project-page video {
   display: block;
@@ -591,44 +605,34 @@ footer p {
   object-fit: contain;
 }
 
-
-/* PROJECT PAGE ARROWS */
-
 .project-page .arrow {
   position: absolute;
-
   right: 2rem;
   bottom: 2rem;
-
   display: block;
-
   cursor: pointer;
 }
 
-
-/* BACK TO PROJECTS */
-
 .project-page .project-back {
   min-height: auto;
-
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
-
-
-/* PROJECT PAGE FOOTER */
 
 .project-page footer {
   margin-top: 1rem;
 }
 
+
+/* ==================================================
+   GAME / PRESENTATION EMBEDS
+================================================== */
+
 .game-embed-container {
-  width: 100%;
-  max-width: none;
-  margin: 0 auto;
-  padding: 0;
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   background: white;
 }
 
@@ -651,7 +655,12 @@ footer p {
   margin: 0 auto;
   object-fit: contain;
 }
-/* RMS PDF Documentation */
+
+
+/* ==================================================
+   PDF DOCUMENTATION
+================================================== */
+
 #documentation {
   padding: 4rem 0;
 }
@@ -664,125 +673,97 @@ footer p {
 }
 
 .pdf-container iframe {
-  display: block;
+
   width: 100%;
   height: 700px;
+  margin: 0 auto;
   border: none;
+}
+
+/* Optional VR/ML-specific PDF viewer class */
+.project-page .research-pdf {
+  height: 700px;
+  background: transparent;
 }
 
 .pdf-download {
   margin-top: 1rem;
+  text-align: center;
 }
 
 .pdf-download a {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
-  .pdf-container {
-    width: 95%;
-  }
 
-  .pdf-container iframe {
-    height: 500px;
-  }
-}
+/* ==================================================
+   INTERNSHIP MINI PROJECTS
+================================================== */
 
-/* ========================================
-   PROJECT-FIRST PORTFOLIO HOMEPAGE
-======================================== */
-
-/* Desktop navigation */
-#desktop-nav {
-  justify-content: space-between;
-  padding: 0 5rem;
-}
-
-.nav-brand a {
-  color: black;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-/* Hero section */
-#profile {
-  height: auto;
-  min-height: 60vh;
-  padding: 6rem 5rem 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-intro {
+.project-page .mini-projects-container {
   width: 100%;
   max-width: 1100px;
-  text-align: left;
+  margin: 0 auto;
 }
 
-.hero-intro .section__text__p1 {
-  text-align: left;
-  font-size: 0.85rem;
-  letter-spacing: 0.15rem;
-}
-
-.hero-heading {
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  line-height: 1.05;
-  margin: 1rem 0 1.5rem;
-}
-
-.hero-description {
-  max-width: 650px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: rgb(85, 85, 85);
-}
-
-.hero-intro .btn-container {
-  justify-content: flex-start;
-  margin-top: 2rem;
-}
-
-.hero-socials {
-  justify-content: flex-start;
-  margin-top: 1.5rem;
-}
-
-/* Projects */
-#projects {
-  padding-top: 2rem;
-}
-
-#projects .title {
-  margin-bottom: 2rem;
-}
-
-#projects .project-img {
+.project-page .mini-project {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-/* Skill text alignment */
-#experience .article-container article {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-#experience .article-container article div {
   text-align: left;
 }
 
-#experience .article-container article h3,
-#experience .article-container article p {
-  margin: 0;
+.project-page .mini-project > .experience-sub-title {
+  margin: 20px 0 12px;
+  text-align: left;
 }
 
-/* Mobile layout */
+.project-page .mini-project > p {
+  margin: 0 0 20px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.project-page .mini-project-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+}
+
+.project-page .mini-project-image,
+.project-page .mini-project-video {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  object-fit: contain;
+}
+
+.project-page .mini-project-image {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.project-page .mini-project-caption {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+
+/* ==================================================
+   RESPONSIVE / MOBILE
+================================================== */
+
 @media screen and (max-width: 768px) {
+  /* Navigation */
+
   #desktop-nav {
     display: none;
   }
@@ -792,6 +773,19 @@ footer p {
     justify-content: space-between;
     padding: 0 1.5rem;
   }
+
+  /* General section spacing */
+
+  section {
+    margin: 0 1.5rem;
+  }
+
+  .section-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Homepage hero */
 
   #profile {
     min-height: auto;
@@ -810,90 +804,93 @@ footer p {
     flex-wrap: wrap;
   }
 
+  /* Homepage projects */
+
   #projects {
     padding-top: 2rem;
+  }
+
+  #projects .about-containers {
+    grid-template-columns: 1fr;
   }
 
   #projects .project-img {
     height: 200px;
   }
+
+  /* Project pages */
+
+  .project-page section {
+    margin: 0 1.5rem;
+    padding: 4rem 0;
+  }
+
+  .project-page #profile {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .project-page .arrow {
+    right: 0;
+    bottom: 1rem;
+  }
+
+  /* PDFs */
+
+  .pdf-container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .pdf-container iframe {
+    height: 500px;
+  }
+
+  /* Internship mini projects */
+
+  .project-page .mini-project-media {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-page .mini-project-image,
+  .project-page .mini-project-video {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .project-page .mini-project-caption {
+    text-align: left;
+  }
 }
 
+/* Center PDF documentation at all screen sizes */
+.project-page #documentation .section-container,
+.project-page .section-container:has(.pdf-container) {
+  justify-content: center;
+  width: 100%;
+}
 
-    /* INTERN MINI PROJECTS */
-    .project-page .mini-projects-container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+.project-page .section-container:has(.pdf-container) .about-details-container {
+  width: 100%;
+  align-items: center;
+}
 
-    .project-page .mini-project {
-      width: 100%;
-      text-align: left;
-    }
+.project-page .section-container:has(.pdf-container) .text-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    .project-page .mini-project > .experience-sub-title {
-      text-align: left;
-      margin: 20px 0 12px;
-    }
+.project-page .pdf-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
 
-    .project-page .mini-project > p {
-      text-align: left;
-      margin: 0 0 20px;
-      line-height: 1.7;
-    }
-
-    .project-page .mini-project-media {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .project-page .mini-project-image,
-    .project-page .mini-project-video {
-      display: block;
-      width: 100%;
-      height: 350px;
-      max-width: none;
-      margin: 0;
-      padding: 0;
-      object-fit: contain;
-      background: transparent;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      border-radius: 0;
-    }
-
-    .project-page .mini-project-caption {
-      text-align: right;
-      margin-top: 12px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .project-page .mini-project-media {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .project-page .mini-project-image,
-      .project-page .mini-project-video {
-        height: auto;
-        max-height: 400px;
-      }
-
-      .project-page .mini-project-image {
-        width: 100%;
-      }
-
-      .project-page .mini-project-caption {
-        text-align: left;
-      }
-    }
-
-.project-page .mini-project-image {
+.project-page .pdf-container iframe {
   display: block;
+  width: 100%;
+  height: 700px;
   margin: 0 auto;
 }
